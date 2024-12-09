@@ -205,7 +205,7 @@ text-align: center;
 .bodybg {
 /* background-color: #f3f3f3 !important; */
 width: 100%;
-background-color: rgba(255, 255, 255, 0.014); /* Fallback color: semi-transparent black */
+background-color: rgb(255, 255, 255); /* Fallback color: semi-transparent black */
 background-size: cover; /* Ensure the image covers the whole area */
 background-position: center; /* Center the image */
 background-blend-mode: overlay; /* Blends the image with the background color */

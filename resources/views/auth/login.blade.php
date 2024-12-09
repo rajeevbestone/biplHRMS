@@ -4,7 +4,7 @@
         <title>Bestone - HRMS</title>
         <link rel="stylesheet" href="{{ asset('assets/customCSS/custom.css') }}">
     </head>
-    <body class="bodybg" style="background-image: url({{ asset('assets/customIMG') }}/bgimage.jpg);">
+    <body class="bodybg">
         <div class="formbody">
             <img class="logologin" src="{{ asset('assets/customIMG') }}/logologin.png" alt="logo">
             <div class="box">
