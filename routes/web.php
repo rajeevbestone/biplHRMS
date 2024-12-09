@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Session In Routes Start
+Route::middleware('SessionInCheck')->group(function(){
+    Route::get('/dashboard', [DashboardController::class, "showDashboard"])->name('dashboard');
+});
+// Session In Routes End
+
+// Session Out Routes Start
+Route::middleware('SessionOutCheck')->group(function(){
+    Route::get('/', [AuthController::class, "showLoginForm"])->name('login');
+    Route::post('/checkAuth', [AuthController::class, "authenticate"]);
+});
+// Session Out Routes End
