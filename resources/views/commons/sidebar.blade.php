@@ -106,80 +106,83 @@
                         <span class="menu-title">Masters</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="ui-basic">
+                    <div class="collapse {{ (($routeName == 'master/branch/list') || ($routeName == 'master/branch/create') || ($routeName == 'master/branch/update') || ($routeName == 'master/department/list') || ($routeName == 'master/department/create') || ($routeName == 'master/department/update') || ($routeName == 'master/designation/list') || ($routeName == 'master/designation/create') || ($routeName == 'master/designation/update') || ($routeName == 'master/leave/list') || ($routeName == 'master/leave/create') || ($routeName == 'master/leave/update') || ($routeName == 'master/shift/list') || ($routeName == 'master/shift/create') || ($routeName == 'master/shift/update') || ($routeName == 'master/employeeManagement/list') || ($routeName == 'master/employeeManagement/onboard') || ($routeName == 'master/employeeManagement/update') || ($routeName == 'master/settings') || ($routeName == 'master/session/list') || ($routeName == 'master/session/create') || ($routeName == 'master/session/update') ? 'show' : '') }}" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Branch</a>
+                            <li class="nav-item {{ $routeName == 'master/branch/list' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/branch/list') }}">Branch</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Department</a>
+                            <li class="nav-item {{ $routeName == 'master/department/list' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/department/list') }}">Department</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Designation</a>
+                            <li class="nav-item {{ $routeName == 'master/designation/list' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/designation/list') }}">Designation</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Leave</a>
+                            <li class="nav-item {{ $routeName == 'master/leave/list' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/leave/list') }}">Leave</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Shift</a>
+                            <li class="nav-item {{ $routeName == 'master/shift/list' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/shift/list') }}">Shift</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Employee Management</a>
+                            <li class="nav-item {{ $routeName == 'master/employeeManagement/list' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/employeeManagement/list') }}">Employee Management</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Settings</a>
+                            <li class="nav-item {{ $routeName == 'master/settings' ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ url('master/settings') }}">Settings</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 @endif
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="icon-head menu-icon"></i>
-                <span class="menu-title">Profile</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                <i class="icon-paper menu-icon"></i>
-                <span class="menu-title">Request</span>
-                <i class="menu-arrow"></i>
-              </a>
-              <div class="collapse" id="icons">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Raised By Me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Attendance</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Leave</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Assigned To Me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Attendance</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Leave</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="icon-mail menu-icon"></i>
-                <span class="menu-title">Attendance</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="icon-watch menu-icon"></i>
-                <span class="menu-title">Leave</span>
-              </a>
-            </li>
-          </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-head menu-icon"></i>
+                        <span class="menu-title">Profile</span>
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                        <i class="icon-paper menu-icon"></i>
+                        <span class="menu-title">Request</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="icons">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Raised By Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Attendance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Leave</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Assigned To Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Attendance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Leave</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-mail menu-icon"></i>
+                        <span class="menu-title">Attendance</span>
+                    </a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="icon-watch menu-icon"></i>
+                        <span class="menu-title">Leave</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
