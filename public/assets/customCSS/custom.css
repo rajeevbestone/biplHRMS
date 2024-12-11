@@ -236,3 +236,8 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 }
+span.text-danger {
+    color: #f00 !important;
+    margin: 0px;
+    padding: 6px 0px !important;
+}

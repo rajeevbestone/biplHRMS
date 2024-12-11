@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 // Session In Routes Start
 Route::middleware('SessionInCheck')->group(function(){
+    Route::get('/logout', [AuthController::class, "authOut"])->name('logout');
     Route::get('/dashboard', [DashboardController::class, "showDashboard"])->name('dashboard');
 });
 // Session In Routes End

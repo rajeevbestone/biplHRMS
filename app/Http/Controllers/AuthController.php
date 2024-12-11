@@ -21,6 +21,12 @@ class AuthController extends Controller
         return view("auth.login", $data);
     }
 
+    public function authOut() {
+        Session::flush();
+
+        return redirect()->route('login')->with('success', 'Logged out successfully');
+    }
+
     public function authenticate(Request $request) {
 
         $validator = Validator::make($request->all(), [
@@ -47,7 +53,7 @@ class AuthController extends Controller
                 if (Hash::check($request->input("password"), $userCheck->password)) {
 
                     // check if admin or not
-                    $adminStatus = DB::table("role_master")->select("is_admin")->where("role_id", $userCheck->role_id)->first();
+                    $adminStatus = DB::table("role_master")->select("is_admin")->where("id", $userCheck->role_id)->first();
                     if ($adminStatus) {
                         Session::put("userID", $userCheck->id);
                         Session::put("employee_code", $userCheck->employee_code);

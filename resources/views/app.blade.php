@@ -1,6 +1,6 @@
-@include('commons.header');
-@include('commons.sidebar');
+@include('commons.header')
+@include('commons.sidebar')
 
-@yeild('main_content');
+@yield('main_content')
 
-@include('commons.footer');
+@include('commons.footer')
